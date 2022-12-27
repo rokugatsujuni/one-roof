@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/places/house/house.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/music/2 23_AM_2.mp3" type="AudioStream" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/tile/wall/wall_outer_tile.tres" type="TileSet" id=4]
 [ext_resource path="res://assets/tile/floor/floor_tile.tres" type="TileSet" id=5]
 [ext_resource path="res://assets/texure/background/apaato_street_day.jpg" type="Texture" id=6]
+[ext_resource path="res://scenes/camera/moveable_camera.tscn" type="PackedScene" id=7]
 
 [node name="House" type="Node2D"]
 script = ExtResource( 1 )
@@ -35,10 +36,6 @@ cell_size = Vector2( 128, 64 )
 cell_y_sort = true
 format = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 375, 279 )
-current = true
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_ignore_camera_zoom = true
 
@@ -49,3 +46,6 @@ motion_scale = Vector2( 0, 0 )
 modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
+
+[node name="MoveableCamera" parent="." instance=ExtResource( 7 )]
+position = Vector2( 421, 274 )
