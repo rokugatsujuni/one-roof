@@ -3,8 +3,8 @@
 
 ## Tools
 
-- Godot Engine 3.5.1 Mono Version
-- .NET 6.0 or above for C# programming language
+- Godot Engine 3.5.1
+
 
 ## Licenses
 
