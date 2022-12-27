@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/places/house/house.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/music/2 23_AM_2.mp3" type="AudioStream" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/tile/floor/floor_tile.tres" type="TileSet" id=5]
 [ext_resource path="res://assets/texure/background/apaato_street_day.jpg" type="Texture" id=6]
 [ext_resource path="res://scenes/camera/moveable_camera.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/ui/hud/clock/clock_display.tscn" type="PackedScene" id=8]
 
 [node name="House" type="Node2D"]
 script = ExtResource( 1 )
@@ -49,3 +50,7 @@ texture = ExtResource( 6 )
 
 [node name="MoveableCamera" parent="." instance=ExtResource( 7 )]
 position = Vector2( 421, 274 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ClockDisplay" parent="CanvasLayer" instance=ExtResource( 8 )]
