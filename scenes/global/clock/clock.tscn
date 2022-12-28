@@ -3,12 +3,10 @@
 [ext_resource path="res://scenes/global/clock/clock.gd" type="Script" id=1]
 [ext_resource path="res://scenes/timeday/timeday.tres" type="Resource" id=2]
 
-[node name="Clock" type="Node2D"]
+[node name="Oclock" type="Node2D"]
 script = ExtResource( 1 )
 timeday = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
