@@ -18,9 +18,6 @@ func _ready() -> void:
 	camera.current = true
 	camera.zoom = Vector2(zoom, zoom)
 
-func _process(delta: float) -> void:
-	# camera move
-	pass
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
