@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "BackgroundData",
 "language": "GDScript",
 "path": "res://scenes/background/bg_data.gd"
+}, {
+"base": "Area2D",
+"class": "Interactable",
+"language": "GDScript",
+"path": "res://scenes/interactable/interatable.gd"
 } ]
 _global_script_class_icons={
-"BackgroundData": ""
+"BackgroundData": "",
+"Interactable": ""
 }
 
 [application]

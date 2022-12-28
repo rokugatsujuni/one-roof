@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/texure/interior/arrow.png" type="Texture" id=1]
+[ext_resource path="res://scenes/interactable/interatable.gd" type="Script" id=2]
 
-[node name="Arrow" type="Position2D"]
+[node name="Arrow" type="Area2D"]
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -8, 5, 16, 5, 16, -13, 8, -9, -12, -19, -20, -15, -20, -8, -8, -2 )
