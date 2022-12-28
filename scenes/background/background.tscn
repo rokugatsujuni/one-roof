@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/background/background.gd" type="Script" id=1]
+[ext_resource path="res://assets/texure/background/apaato_street.tres" type="Resource" id=2]
+
+[node name="Background" type="Sprite"]
+modulate = Color( 0.615686, 0.607843, 0.607843, 1 )
+scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 1 )
+background_data = ExtResource( 2 )

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://scenes/background/bg_data.gd" type="Script" id=1]
+[ext_resource path="res://assets/texure/background/apaato_street_day.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/texure/background/apaato_street_night.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/texure/background/apaato_street_evening.jpg" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 1 )
+morning_bg = ExtResource( 2 )
+evening_bg = ExtResource( 2 )
+afternoon_bg = ExtResource( 4 )
+night_bg = ExtResource( 3 )
+mid_night_bg = ExtResource( 3 )

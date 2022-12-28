@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "BackgroundData",
+"language": "GDScript",
+"path": "res://scenes/background/bg_data.gd"
+} ]
+_global_script_class_icons={
+"BackgroundData": ""
+}
+
 [application]
 
 config/name="one roof"
