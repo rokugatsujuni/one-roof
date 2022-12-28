@@ -6,4 +6,4 @@
 position = Vector2( 590, 329 )
 enabled = false
 texture = ExtResource( 1 )
-energy = 0.7
+energy = 0.6
