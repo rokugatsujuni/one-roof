@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/places/house/house.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/music/2 23_AM_2.mp3" type="AudioStream" id=2]
@@ -11,7 +11,9 @@
 [ext_resource path="res://scenes/ambience/Light2D.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/ambience/ambiences.gd" type="Script" id=10]
 [ext_resource path="res://assets/texure/ambience/ambience.tres" type="Gradient" id=11]
+[ext_resource path="res://scenes/interiors/door/door.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/_debug/TimeDayDebug.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/interiors/arrow/arrow.tscn" type="PackedScene" id=14]
 
 [node name="House" type="Node2D"]
 script = ExtResource( 1 )
@@ -44,6 +46,24 @@ cell_y_sort = true
 format = 1
 
 [node name="Interior" type="YSort" parent="."]
+
+[node name="Door" parent="Interior" instance=ExtResource( 12 )]
+position = Vector2( 318, 296 )
+
+[node name="Door2" parent="Interior" instance=ExtResource( 12 )]
+position = Vector2( -16, 209 )
+scale = Vector2( -1, 1 )
+
+[node name="Sprite" parent="Interior/Door2" index="0"]
+frame = 1
+
+[node name="Arrow" parent="Interior" instance=ExtResource( 14 )]
+position = Vector2( 173, 453 )
+scale = Vector2( -1, 1 )
+
+[node name="Arrow2" parent="Interior" instance=ExtResource( 14 )]
+position = Vector2( 270, 501 )
+scale = Vector2( -1, 1 )
 
 [node name="Ambiences" type="Node2D" parent="."]
 script = ExtResource( 10 )
@@ -105,3 +125,5 @@ margin_bottom = 22.0
 margin_top = 26.0
 margin_right = 183.0
 margin_bottom = 50.0
+
+[editable path="Interior/Door2"]
